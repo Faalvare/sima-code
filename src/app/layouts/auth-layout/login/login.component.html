@@ -37,7 +37,7 @@
                 </span>
               </div>
               <div class="card-footer justify-content-center">
-                <button mat-raised-button class="btn btn-info">Login</button>
+                <button mat-raised-button class="btn btn-primary" [disabled]="loginForm.invalid || loading">Login</button>
               </div>
             </div>
           </form>

@@ -1,0 +1,25 @@
+<category name="Expresiones" colour="#FF00FF">
+    <block type="verguenza"></block>
+    <block type="tristeza"></block>
+    <block type="gracia"></block>
+    <block type="sonrisa"></block>
+    <block type="nervioso"></block>
+    <block type="feliz"></block>
+    <block type="esceptico"></block>
+    <block type="enamorado"></block>
+    <block type="desconsuelo"></block>
+    <block type="muerto"></block>
+    <block type="concentrado"></block>
+    <block type="angustia"></block>
+    <block type="pacman"></block>
+    <block type="lengua"></block>
+    <block type="euforia"></block>
+    <block type="curioso-abajo"></block>
+    <block type="curioso"></block>
+    <block type="pato"></block>
+    <block type="gato"></block>
+    <block type="asustado"></block>
+    <block type="sorprendido"></block>
+    <block type="enojado"></block>
+</category>
+<sep></sep>

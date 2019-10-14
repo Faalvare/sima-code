@@ -9,12 +9,12 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
-
     path: '',
     canActivate: [AuthGuard],
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, {
+  },
+  {
     path: '',
     component: AdminLayoutComponent,
     children: [
@@ -23,7 +23,8 @@ const routes: Routes = [
         loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
       }
     ]
-  }, {
+  },
+  {
     path: '',
     component: AuthLayoutComponent,
     children: [

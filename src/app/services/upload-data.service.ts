@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { Orden } from '../models/orden.model';
 
 @Injectable()
 export class UploadDataService {
@@ -18,7 +19,7 @@ export class UploadDataService {
 
   }
 
-  uploadData(body: any): Observable<any> {
+  uploadData(body: Orden): Observable<any> {
 
     return this.http.post(this.endPointUrl, body, this.httpOptions);
 

@@ -7,12 +7,12 @@
                         <span>
                             <h4 class="card-icon">Playground</h4>
                         </span>
-                        <button type="button" class="btn btn-primary pull-right" (click)="ejecutar()">
+                        <button type="button" class="btn btn-primary pull-right" (click)="ejecutar()" [disabled]="btnJugar!=='Jugar'">
                             {{ btnJugar }}
                         </button>
                     </div>
                     <div class="card-body card-body">
-                        <div id="blocklyDiv" style="height: 360px; width: 100%;"></div>
+                        <div id="blocklyDiv" style="height: 60vh; width: 100%;"></div>
                     </div>
                 </div>
             </div>

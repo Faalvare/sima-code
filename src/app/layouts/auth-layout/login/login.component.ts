@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
-
+import Swal from 'sweetalert2'
 import { AuthenticationService } from '../../../services/authentication.service';
 
 @Component({
@@ -42,20 +41,33 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
     // stop here if form is invalid
     if (this.loginForm.invalid) {
-      return;
+      this.errorMessage();
+      // return;
     }
     this.loading = true;
     this.authenticationService.login(this.f.email.value, this.f.password.value).subscribe(
-        data => {
-          this.router.navigate([this.returnUrl]);
-        },
-        error => {
-          this.error = error;
-          this.loading = false;
-        });
+      data => {
+        this.router.navigate([this.returnUrl]);
+        this.loading = false;
+      },
+      error => {
+        this.error = error;
+        console.log(this.error);
+        this.errorMessage();
+        this.loading = false;
+      });
+  }
+
+  errorMessage() {
+    Swal.fire({
+      title: 'Opsss...',
+      text: 'El usuario o la contraseña que utilizaste tiene un error, corrige y vuelve a intentar',
+      type: 'error',
+      confirmButtonColor: '#F27474'
+    });
+    return;
   }
 
 }

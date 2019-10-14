@@ -1,0 +1,36 @@
+<category name="Movimientos" colour="#6d5ba5">
+    <block type="start"></block>
+    <block type="move">
+        <field name="direction">Forward</field>
+        <value name="steps">
+            <shadow type="math_number">
+                <field name="NUM">1</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="tilt">
+        <field name="direction">Forward</field>
+    </block>
+    <block type="stretch">
+        <field name="side">Right</field>
+    </block>
+    <block type="move_hands">
+        <field name="hand">Right</field>
+        <field name="direction">Up</field>
+    </block>
+    <block type="move_legs">
+        <field name="leg">Right</field>
+        <field name="action">Kick</field>
+    </block>
+    <block type="salute"></block>
+    <block type="dance"></block>
+    <block type="stop"></block>
+    <block type="surprise"></block>
+    <block type="off"></block>
+    <block type="celebrate"></block>
+    <block type="wave"></block>
+    <block type="balance"></block>
+    <block type="hug"></block>
+    <block type="walk-slowly"></block>
+</category>
+<sep></sep>
